@@ -1,29 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
-
+    <meta charset="utf-8">
+    <title>Coming Soon Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="bgimg">
-    <img src="logo1.svg" class="ab4" id="logo">
-    <div class="middle">
-      <h1 class="ab" id="font1">THE INITIATIVE'20</h1>
+    <div class="container">
+        <img src="logo1.png" alt="">
+        <h1>THE INITIATIVE'19</h1>
+        <h2>coming soon.</h2>
 
-      <h1 class="ab" id="font2">COMING SOON</h1>
-      <hr>
-      <br>
-      <div class="time">
-        <h3 id="demo" class="ab3" id="font3"></h3>
-      </div>
+        <div class="count">
+            <div class="countd">
+                <span id="days">00</span> DAYS
+            </div>
+
+            <div class="countd">
+                <span id="hours">00</span> HOURS
+            </div>
+
+            <div class="countd">
+                <span id="minutes">00</span> MINUTES
+            </div>
+
+            <div class="countd">
+                <span id="seconds">00</span> SECONDS
+            </div>
+        </div>
     </div>
-  </div>
+
+
+    <script type="text/javascript">
+        var count = new Date("mar 1,2020 00:00:01").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var d = count - now;
+
+            var days = Math.floor(d / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((d % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (d <= 0) {
+                clearInterval(x);
+            }
+        }, 1000);
+    </script>
+
+
+
+
+
 </body>
 
 </html>
