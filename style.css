@@ -60,3 +60,26 @@ hr {
     margin: 0px;
     padding: 1px;
 }
+
+@media screen and (min-width: 1200px) {
+    img{
+        width: 7%;
+    }
+}
+
+
+@media screen and (min-width: 350px) {
+    img{
+        width: 17%;
+    }
+}
+
+/* #font1{
+    font-family: ;
+}
+#font2{
+    font-family: ;
+}
+#font3{
+    font-family: ;
+} */
