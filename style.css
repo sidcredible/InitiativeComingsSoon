@@ -1,0 +1,62 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bgimg {
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("1-01-01.svg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: black;
+    font-family: "Poppins", monospace;
+    font-size: 5vw;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+    border-color: black;
+}
+
+#logo {
+    /* transform: translate(1316%, 0%); */
+    padding-top: 2%;
+}
+
+@media screen and (min-width: 350px) {
+    .ab {
+        font-size: 50px;
+    }
+    .ab3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .ab {
+        font-size: 4vw;
+    }
+    .ab2 {
+        font-size: 3vw;
+    }
+    .ab3 {
+        font-size: 4vw;
+    }
+}
+
+.ab3 {
+    margin: 0px;
+    padding: 1px;
+}
